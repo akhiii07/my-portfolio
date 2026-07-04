@@ -3,199 +3,523 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akhilesh Chauhan - Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Akhilesh Chauhan - Product Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Luckiest+Guy&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <span class="nav-logo">AC</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <p class="hero-greeting">Hi, I am</p>
-      <h1 class="hero-name">Akhilesh Chauhan</h1>
-      <p class="hero-role"><span class="typed" id="typed-text"></span><span class="cursor">|</span></p>
-      <p class="hero-sub">Building products at the intersection of AI, fintech, and real-world impact. Currently at <span class="highlight">Accenture</span>.</p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="https://github.com/akhiii07" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+<a href="#home" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner container">
+    <a href="#home" class="nav-logo">AC</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#product-thinking">Product Thinking</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badges">
+          <span class="pill-badge badge-sand">&#127970; FINTECH PM</span>
+          <span class="pill-badge badge-blue">&#129302; AI BUILDER</span>
+          <span class="pill-badge badge-rose">&#128202; CAPITAL MARKETS</span>
+          <span class="pill-badge badge-lavender">&#127991; BASED IN JAPAN</span>
+          <span class="pill-badge badge-sand">&#127981; IIT GANDHINAGAR</span>
+        </div>
+        <h1 class="hero-name">AKHILESH<br>CHAUHAN</h1>
+        <p class="hero-title">PRODUCT &amp; PROGRAM MANAGER<br>ACCENTURE JAPAN</p>
+        <p class="hero-desc">
+          3+ years turning user feedback into product enhancements across Lending,
+          Banking, and Capital Markets platforms at global financial institutions.
+          Building AI agents that automate product-ops at scale.
+        </p>
+        <div class="hero-cta">
+          <a href="#case-studies" class="btn-brutal btn-primary">VIEW CASE STUDIES &#x2192;</a>
+          <a href="#contact" class="btn-brutal btn-outline">GET IN TOUCH</a>
+        </div>
       </div>
-      <div class="hero-scroll-hint"><span>scroll</span><div class="scroll-line"></div></div>
-    </div>
-    <div class="hero-bg-grid"></div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title">About</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I am a full-stack developer with a passion for building thoughtful digital products. My work spans fintech prototypes, AI-powered tools, and interactive web experiences.</p>
-          <p>I enjoy tackling complex domain problems and turning them into clean, usable interfaces. Outside of code, I am interested in emerging fintech, urban AI applications, and design systems.</p>
-        </div>
-        <div class="about-stats">
-          <div class="stat-card"><span class="stat-number">27+</span><span class="stat-label">Public Repos</span></div>
-          <div class="stat-card"><span class="stat-number">6+</span><span class="stat-label">Years Coding</span></div>
-          <div class="stat-card"><span class="stat-number">5+</span><span class="stat-label">Languages</span></div>
-          <div class="stat-card"><span class="stat-number">&#x221E;</span><span class="stat-label">Things to Build</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="skills">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3 class="skill-group-title">Languages</h3>
-          <div class="skill-pills">
-            <span class="pill pill-ts">TypeScript</span>
-            <span class="pill pill-js">JavaScript</span>
-            <span class="pill pill-java">Java</span>
-            <span class="pill pill-py">Python</span>
-            <span class="pill">HTML / CSS</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Frontend</h3>
-          <div class="skill-pills">
-            <span class="pill">React</span>
-            <span class="pill">SCSS</span>
-            <span class="pill">Responsive Design</span>
-            <span class="pill">Component Architecture</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Backend and Tools</h3>
-          <div class="skill-pills">
-            <span class="pill">Node.js</span>
-            <span class="pill">REST APIs</span>
-            <span class="pill">Git / GitHub</span>
-            <span class="pill">AI / LLM Integration</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Domain</h3>
-          <div class="skill-pills">
-            <span class="pill pill-fin">Fintech</span>
-            <span class="pill pill-fin">AI / ML Products</span>
-            <span class="pill pill-fin">UX Prototyping</span>
-            <span class="pill pill-fin">System Design</span>
+      <div class="hero-right">
+        <div class="photo-frame">
+          <div class="photo-inner">
+            <div class="photo-monogram">AC</div>
+            <p class="photo-hint">Add your photo here</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    <a href="#marquee" class="scroll-down-btn" id="scrollDown">&#x2193;</a>
+  </div>
+</section>
 
-  <section class="section" id="projects">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-lang lang-ts">TypeScript</span>
-            <div class="project-links"><a href="https://github.com/akhiii07/repayos" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></div>
-          </div>
-          <h3 class="project-name">RepayOS</h3>
-          <p class="project-desc">Cash-flow-aware repayment orchestration prototype for gig workers. Intelligently schedules EMI payments around income patterns to reduce defaults.</p>
-          <div class="project-tags"><span class="tag">Fintech</span><span class="tag">TypeScript</span><span class="tag">Gig Economy</span></div>
-        </div>
+<!-- MARQUEE -->
+<div class="marquee-strip" id="marquee">
+  <div class="marquee-track">
+    <span>ACCENTURE JAPAN</span><span class="star">&#9733;</span>
+    <span>IIT GANDHINAGAR</span><span class="star">&#9733;</span>
+    <span>MIZUHO SECURITIES</span><span class="star">&#9733;</span>
+    <span>YAMAGUCHI BANK</span><span class="star">&#9733;</span>
+    <span>AI AGENT BUILDER</span><span class="star">&#9733;</span>
+    <span>3+ YEARS EXPERIENCE</span><span class="star">&#9733;</span>
+    <span>FINTECH SPECIALIST</span><span class="star">&#9733;</span>
+    <span>AGILE PM</span><span class="star">&#9733;</span>
+    <span>LOAN ORIGINATION</span><span class="star">&#9733;</span>
+    <span>TRADING PLATFORMS</span><span class="star">&#9733;</span>
+    <span>INDIA STACK</span><span class="star">&#9733;</span>
+    <span>UPI PRODUCTS</span><span class="star">&#9733;</span>
+    <span>ACCENTURE JAPAN</span><span class="star">&#9733;</span>
+    <span>IIT GANDHINAGAR</span><span class="star">&#9733;</span>
+    <span>MIZUHO SECURITIES</span><span class="star">&#9733;</span>
+    <span>YAMAGUCHI BANK</span><span class="star">&#9733;</span>
+    <span>AI AGENT BUILDER</span><span class="star">&#9733;</span>
+    <span>3+ YEARS EXPERIENCE</span><span class="star">&#9733;</span>
+    <span>FINTECH SPECIALIST</span><span class="star">&#9733;</span>
+    <span>AGILE PM</span><span class="star">&#9733;</span>
+    <span>LOAN ORIGINATION</span><span class="star">&#9733;</span>
+    <span>TRADING PLATFORMS</span><span class="star">&#9733;</span>
+    <span>INDIA STACK</span><span class="star">&#9733;</span>
+    <span>UPI PRODUCTS</span><span class="star">&#9733;</span>
+  </div>
+</div>
 
-        <div class="project-card featured">
-          <div class="project-header">
-            <span class="project-lang lang-js">JavaScript</span>
-            <div class="project-links"><a href="https://github.com/akhiii07/RentalIQ-AI" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></div>
-          </div>
-          <h3 class="project-name">RentalIQ AI</h3>
-          <p class="project-desc">Hyperlocal rental intelligence for Bengaluru with explainable AI pricing, GPS-verified reviews, and locality scoring. Refactored from prototype to modular React.</p>
-          <div class="project-tags"><span class="tag">AI / ML</span><span class="tag">React</span><span class="tag">Proptech</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-lang lang-java">Java</span>
-            <div class="project-links"><a href="https://github.com/akhiii07/upi-rooms" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></div>
-          </div>
-          <h3 class="project-name">UPI Rooms</h3>
-          <p class="project-desc">Shared expense ledger feature module embedded in a UPI app. Manages group expense splits, settlements, and transaction history within the payments flow.</p>
-          <div class="project-tags"><span class="tag">Fintech</span><span class="tag">Java</span><span class="tag">UPI</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-lang lang-js">JavaScript</span>
-            <div class="project-links"><a href="https://github.com/akhiii07/loan-decision-engine" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></div>
-          </div>
-          <h3 class="project-name">Loan Decision Engine</h3>
-          <p class="project-desc">A rule-based loan decisioning system that evaluates applicant profiles against configurable credit risk thresholds and policy matrices.</p>
-          <div class="project-tags"><span class="tag">Fintech</span><span class="tag">JavaScript</span><span class="tag">Risk</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-lang lang-ts">TypeScript</span>
-            <div class="project-links"><a href="https://github.com/akhiii07/Runzz" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></div>
-          </div>
-          <h3 class="project-name">Runzz</h3>
-          <p class="project-desc">TypeScript project exploring productivity and workflow automation, built with modern TypeScript patterns and tooling.</p>
-          <div class="project-tags"><span class="tag">TypeScript</span><span class="tag">Productivity</span></div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-lang lang-html">CSS/HTML</span>
-            <div class="project-links"><a href="https://github.com/akhiii07/Movie-App" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></div>
-          </div>
-          <h3 class="project-name">Movie App</h3>
-          <p class="project-desc">Movie discovery app with search, filters, and detailed views. Frontend project showcasing API integration and responsive layout design.</p>
-          <div class="project-tags"><span class="tag">CSS</span><span class="tag">API</span><span class="tag">Frontend</span></div>
-        </div>
+<!-- FEATURE CARDS -->
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card card-blue">
+        <div class="feature-icon">&#129302;</div>
+        <h3>AI-AUGMENTED<br>PRODUCT OPS</h3>
+        <p>Designing and deploying AI agent suites across the product lifecycle - from call transcription to requirement scoring, test-gap flagging, and documentation automation cutting effort 70% per cycle.</p>
       </div>
-      <div class="projects-more">
-        <a href="https://github.com/akhiii07?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">View all 27 repos on GitHub</a>
+      <div class="feature-card card-rose">
+        <div class="feature-icon">&#127970;</div>
+        <h3>FINTECH DOMAIN<br>EXPERTISE</h3>
+        <p>End-to-end product operations across lending, banking, and capital markets - loan origination, credit workflows, trading platform enhancements, and compliance-driven release delivery.</p>
+      </div>
+      <div class="feature-card card-lavender">
+        <div class="feature-icon">&#9889;</div>
+        <h3>AGILE DELIVERY<br>&amp; RELEASE MGMT</h3>
+        <p>Sprint planning, backlog grooming, SIT/UAT/regression coordination across 15+ monthly releases in offshore/onshore delivery models. Owned go-live validation end to end.</p>
+      </div>
+      <div class="feature-card card-sand">
+        <div class="feature-icon">&#128161;</div>
+        <h3>USER RESEARCH<br>&amp; FEEDBACK LOOPS</h3>
+        <p>Synthesizing feedback from 80+ traders and 20+ user interviews into prioritized roadmaps, MVP feature sets, and measurable product improvements with clear adoption metrics.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section section-alt" id="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-grid">
-        <p class="contact-sub">I am always open to interesting conversations, collaborations, or opportunities. Feel free to reach out.</p>
-        <div class="contact-links">
-          <a href="https://github.com/akhiii07" target="_blank" rel="noopener" class="contact-card">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>akhiii07</span>
-          </a>
-          <a href="mailto:akhilesh.a.chauhan@accenture.com" class="contact-card">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span>Email</span>
-          </a>
+<!-- ABOUT DIVIDER -->
+<div class="section-divider">
+  <div class="divider-label">WHO AM I?</div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <h2 class="section-heading">About Akhilesh</h2>
+    <div class="about-grid">
+      <div class="about-card card-blue">
+        <div class="about-card-header">
+          <div class="icon-box">&#127891;</div>
+          <h3>EDUCATION</h3>
+        </div>
+        <div class="about-list">
+          <div class="about-item">
+            <strong>B.Tech in Chemical Engineering</strong>
+            <span>Minor in Management Studies</span>
+            <span class="item-sub">IIT Gandhinagar &middot; Jul 2019 - Jul 2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-card card-rose">
+        <div class="about-card-header">
+          <div class="icon-box">&#128295;</div>
+          <h3>TOOLS &amp; SKILLS</h3>
+        </div>
+        <div class="about-list">
+          <div class="about-item"><strong>JIRA</strong><span>Backlog, sprint planning, release management</span></div>
+          <div class="about-item"><strong>SQL &amp; Python</strong><span>Data analysis and workflow automation</span></div>
+          <div class="about-item"><strong>Salesforce / nCino</strong><span>CRM and loan origination platforms</span></div>
+          <div class="about-item"><strong>Whimsical.ai</strong><span>Wireframes and user journey mapping</span></div>
+          <div class="about-item"><strong>Microsoft Copilot</strong><span>AI-assisted product workflows</span></div>
+          <div class="about-item"><strong>Claude Code &amp; GitHub</strong><span>AI agent design and deployment</span></div>
+        </div>
+      </div>
+      <div class="about-card card-sand">
+        <div class="about-card-header">
+          <div class="icon-box">&#10024;</div>
+          <h3>FUN FACTS</h3>
+        </div>
+        <div class="about-list">
+          <div class="about-item-simple">&#128205; Based in Japan (Tokyo area)</div>
+          <div class="about-item-simple">&#127988; From India, working globally</div>
+          <div class="about-item-simple">&#129302; Building AI agents for fintech ops</div>
+          <div class="about-item-simple">&#127981; IIT Gandhinagar alumnus</div>
+          <div class="about-item-simple">&#127970; Deep interest in India Stack and UPI</div>
+          <div class="about-item-simple">&#128187; Codes side fintech projects in TypeScript</div>
+          <div class="about-item-simple">&#128202; Obsessed with product metrics and data</div>
         </div>
       </div>
     </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>Built with HTML, CSS and JS - Deployed via GitHub Pages</p>
-      <p class="footer-copy">2026 Akhilesh Chauhan</p>
+    <div class="section-cta">
+      <a href="#contact" class="btn-brutal btn-primary">CONNECT WITH ME &#x2192;</a>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">3+</div>
+        <div class="stat-label">YEARS OF EXPERIENCE</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">80+</div>
+        <div class="stat-label">USERS INTERVIEWED</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">70%</div>
+        <div class="stat-label">EFFORT REDUCTION</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">MONTHLY RELEASES</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CASE STUDIES DIVIDER -->
+<div class="section-divider section-divider-blue">
+  <div class="divider-label">MY WORK</div>
+</div>
+
+<!-- CASE STUDIES -->
+<section class="case-studies-section" id="case-studies">
+  <div class="container">
+    <h2 class="section-heading">Featured <span class="underline-accent">Case Studies</span></h2>
+    <p class="section-sub">Professional work across global financial institutions and self-initiated fintech projects - from AI agent design to India Stack product building.</p>
+    <div class="cases-grid">
+
+      <!-- Professional Cases -->
+      <div class="case-card">
+        <div class="case-header card-blue">
+          <div class="icon-box">&#129302;</div>
+          <a class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Accenture Japan &middot; Yamaguchi Financial Bank</span>
+          <h3>AI Agent Suite for Product Lifecycle</h3>
+          <p class="case-desc">Designed and deployed a connected suite of AI agents across the product lifecycle - transcribing client/internal calls into structured action items, scoring incoming sprint requirements, and flagging test-coverage gaps against prioritized requirements. Reduced documentation, requirement triage, and test planning effort by 70% per cycle.</p>
+          <div class="case-tags">
+            <span class="tag">AI Agents</span><span class="tag">Product Ops</span><span class="tag">Automation</span><span class="tag">Fintech</span>
+          </div>
+          <div class="case-metrics">
+            <span class="metric-pill">&#x2193; 70% effort per cycle</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-rose">
+          <div class="icon-box">&#127970;</div>
+          <a class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Accenture Japan &middot; Yamaguchi Financial Bank</span>
+          <h3>Loan Origination Product Operations</h3>
+          <p class="case-desc">Supported end-to-end product operations for loan-origination workflows covering onboarding, credit assessment, approval routing, and disbursement readiness. Coordinated enhancements across product, engineering, and business teams within a complex offshore/onshore Agile delivery model.</p>
+          <div class="case-tags">
+            <span class="tag">Lending</span><span class="tag">Product Ops</span><span class="tag">Agile</span><span class="tag">Banking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-lavender">
+          <div class="icon-box">&#9889;</div>
+          <a class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Accenture Japan &middot; Yamaguchi Financial Bank</span>
+          <h3>Workflow Automation &amp; Feedback Loop</h3>
+          <p class="case-desc">Drove automated duplicate-customer detection and credit-bureau trigger automation within the loan origination system. Eliminated manual checks creating data quality issues and slowing application processing. Reduced 60% duplicate records and saved 5-10 minutes per application processed.</p>
+          <div class="case-tags">
+            <span class="tag">Automation</span><span class="tag">Data Quality</span><span class="tag">Lending</span><span class="tag">Process Ops</span>
+          </div>
+          <div class="case-metrics">
+            <span class="metric-pill">&#x2193; 60% duplicate records</span>
+            <span class="metric-pill">&#x23F1; 5-10 min saved/application</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-rose">
+          <div class="icon-box">&#128202;</div>
+          <a class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Accenture Japan &middot; Mizuho Securities &middot; 2023-2025</span>
+          <h3>Trading Platform Enhancement via User Feedback</h3>
+          <p class="case-desc">Synthesized feedback from 80+ traders to drive prioritized platform enhancements. Identified latency pain points and feature gaps through structured feedback sessions, translating them into a roadmap that delivered measurable trading performance improvements including a 0.04ms latency reduction unlocking &#165;15M in trading gains.</p>
+          <div class="case-tags">
+            <span class="tag">Capital Markets</span><span class="tag">User Research</span><span class="tag">Roadmap</span><span class="tag">Platform</span>
+          </div>
+          <div class="case-metrics">
+            <span class="metric-pill">&#x2191; 50% feature adoption in 4 weeks</span>
+            <span class="metric-pill">&#165;15M trading gains</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-sand">
+          <div class="icon-box">&#128260;</div>
+          <a class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Accenture Japan &middot; Mizuho Securities &middot; 2023-2025</span>
+          <h3>Agile Delivery &amp; Release Operations</h3>
+          <p class="case-desc">Owned testing, go-live validation, and delivery readiness for 15-20 JIRA tickets per sprint across 15+ coordinated monthly releases. Designed and automated 50+ order-lifecycle test scenarios, cutting regression effort 70% and accelerating UAT sign-offs by 2 days per release cycle.</p>
+          <div class="case-tags">
+            <span class="tag">Agile</span><span class="tag">Release Mgmt</span><span class="tag">QA Automation</span><span class="tag">JIRA</span>
+          </div>
+          <div class="case-metrics">
+            <span class="metric-pill">&#x2193; 70% regression effort</span>
+            <span class="metric-pill">2 days faster UAT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-lavender">
+          <div class="icon-box">&#128300;</div>
+          <a class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">ImBesideYou &middot; Remote, Japan &middot; May-Jul 2022</span>
+          <h3>MVP Research &amp; UX - ImBesideYou</h3>
+          <p class="case-desc">Led 20 user interviews to validate product assumptions for a mental-health support platform. Synthesized insights into a prioritized MVP feature set achieving 75% validation success. Built user journey maps and wireframes for engineering handoff. Ran competitor research to inform roadmap prioritization decisions.</p>
+          <div class="case-tags">
+            <span class="tag">User Research</span><span class="tag">MVP Definition</span><span class="tag">UX</span><span class="tag">Roadmap</span>
+          </div>
+          <div class="case-metrics">
+            <span class="metric-pill">&#x2713; 75% validation success</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Projects -->
+      <div class="case-card">
+        <div class="case-header card-blue">
+          <div class="icon-box">&#128184;</div>
+          <a href="https://github.com/akhiii07/repayos" target="_blank" rel="noopener" class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Side Project &middot; TypeScript &middot; 2026</span>
+          <h3>RepayOS - Gig Worker Repayment Engine</h3>
+          <p class="case-desc">Cash-flow-aware repayment orchestration prototype for gig workers. India's 15M+ gig workers face irregular income cycles - traditional EMI schedules create avoidable defaults. RepayOS aligns repayment timing with income patterns, reducing forced defaults without extending loan tenures.</p>
+          <div class="case-tags">
+            <span class="tag">Fintech</span><span class="tag">Gig Economy</span><span class="tag">TypeScript</span><span class="tag">India Stack</span>
+          </div>
+          <div class="case-metrics">
+            <a href="https://github.com/akhiii07/repayos" target="_blank" class="case-link">View on GitHub &#x2192;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-rose">
+          <div class="icon-box">&#127961;</div>
+          <a href="https://github.com/akhiii07/RentalIQ-AI" target="_blank" rel="noopener" class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Side Project &middot; React / JavaScript &middot; 2026</span>
+          <h3>RentalIQ AI - Bengaluru Rental Intelligence</h3>
+          <p class="case-desc">Hyperlocal rental pricing platform for Bengaluru with explainable AI pricing, GPS-verified reviews, and locality scoring. Addresses the opacity problem in Indian rental markets where pricing is disconnected from verifiable signals. Refactored from single-file prototype into modular React component tree.</p>
+          <div class="case-tags">
+            <span class="tag">AI / ML</span><span class="tag">React</span><span class="tag">Proptech</span><span class="tag">Explainability</span>
+          </div>
+          <div class="case-metrics">
+            <a href="https://github.com/akhiii07/RentalIQ-AI" target="_blank" class="case-link">View on GitHub &#x2192;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-lavender">
+          <div class="icon-box">&#128172;</div>
+          <a href="https://github.com/akhiii07/upi-rooms" target="_blank" rel="noopener" class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Side Project &middot; Java &middot; 2026</span>
+          <h3>UPI Rooms - Shared Expense Ledger</h3>
+          <p class="case-desc">Shared expense ledger module embedded natively within a UPI payments app (V1 MVP). Solves the group expense splitting problem inside the UPI flow - eliminating the need to switch to third-party apps. Manages group splits, settlements, and transaction history within the payments interface.</p>
+          <div class="case-tags">
+            <span class="tag">Fintech</span><span class="tag">UPI</span><span class="tag">Java</span><span class="tag">India Stack</span>
+          </div>
+          <div class="case-metrics">
+            <a href="https://github.com/akhiii07/upi-rooms" target="_blank" class="case-link">View on GitHub &#x2192;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-sand">
+          <div class="icon-box">&#9878;</div>
+          <a href="https://github.com/akhiii07/loan-decision-engine" target="_blank" rel="noopener" class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Side Project &middot; JavaScript &middot; 2026</span>
+          <h3>Loan Decision Engine - Risk Scoring</h3>
+          <p class="case-desc">Automated rule-based loan decisioning system integrating financial variables and simulation scenarios to generate risk scores and data-driven lending decisions. Addresses the consistency and speed gaps in manual credit decisioning - a problem directly observed during professional work on loan origination platforms.</p>
+          <div class="case-tags">
+            <span class="tag">Fintech</span><span class="tag">Lending</span><span class="tag">Risk</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="case-metrics">
+            <a href="https://github.com/akhiii07/loan-decision-engine" target="_blank" class="case-link">View on GitHub &#x2192;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-header card-blue">
+          <div class="icon-box">&#128640;</div>
+          <a href="https://github.com/akhiii07/Runzz" target="_blank" rel="noopener" class="arrow-box">&#x2192;</a>
+        </div>
+        <div class="case-body">
+          <span class="case-type">Side Project &middot; TypeScript &middot; 2026</span>
+          <h3>Runzz - Workflow Automation Tool</h3>
+          <p class="case-desc">TypeScript tool for automating repetitive developer and PM workflows. Inspired by the daily friction of manual, recurring tasks in product operations - the same problem addressed professionally at Accenture Japan through the AI agent suite. Runzz is the personal, lightweight expression of that same conviction.</p>
+          <div class="case-tags">
+            <span class="tag">TypeScript</span><span class="tag">Automation</span><span class="tag">Productivity</span><span class="tag">Dev Tools</span>
+          </div>
+          <div class="case-metrics">
+            <a href="https://github.com/akhiii07/Runzz" target="_blank" class="case-link">View on GitHub &#x2192;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="section-cta">
+      <a href="https://github.com/akhiii07" target="_blank" rel="noopener" class="btn-brutal btn-outline">VIEW ALL REPOS ON GITHUB &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT THINKING DIVIDER -->
+<div class="section-divider">
+  <div class="divider-label">PRODUCT THINKING</div>
+</div>
+
+<!-- PRODUCT THINKING -->
+<section class="thinking-section" id="product-thinking">
+  <div class="container">
+    <h2 class="section-heading">Product <span class="underline-accent">Thinking</span></h2>
+    <p class="section-sub">Essays, teardowns, and observations on fintech, AI products, and the India Stack. More coming soon.</p>
+    <div class="thinking-grid">
+      <div class="thinking-card card-lavender">
+        <div class="thinking-meta">
+          <span class="thinking-tag">FINTECH</span>
+          <span class="thinking-date">Coming soon</span>
+        </div>
+        <h3>Why India's Gig Economy Needs Smarter Repayment Systems</h3>
+        <p>India has 15M+ gig workers facing irregular income cycles. Traditional EMI models are built for salaried employees. What does a cash-flow-aware lending product look like, and what does the UX of financial flexibility mean at this scale?</p>
+        <a class="case-link">Read Essay &#x2192;</a>
+      </div>
+      <div class="thinking-card card-blue">
+        <div class="thinking-meta">
+          <span class="thinking-tag">UPI &amp; INDIA STACK</span>
+          <span class="thinking-date">Coming soon</span>
+        </div>
+        <h3>UPI's Next Chapter: Group Finance and Shared Ledgers</h3>
+        <p>UPI processes 20B+ transactions monthly yet group expense management still routes through third-party apps. An analysis of the native product gap and what embedded UPI group finance could unlock for the 500M+ active UPI users.</p>
+        <a class="case-link">Read Essay &#x2192;</a>
+      </div>
+      <div class="thinking-card card-rose">
+        <div class="thinking-meta">
+          <span class="thinking-tag">AI PRODUCTS</span>
+          <span class="thinking-date">Coming soon</span>
+        </div>
+        <h3>The Explainability Problem in AI-Driven Financial Decisions</h3>
+        <p>When an AI system recommends a rental price or scores a loan application, can the user understand why? Exploring the tension between model accuracy and human trust - and what PM decisions actually shape explainability in fintech AI products.</p>
+        <a class="case-link">Read Essay &#x2192;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT DIVIDER -->
+<div class="section-divider section-divider-blue">
+  <div class="divider-label">GET IN TOUCH</div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2 class="section-heading">Let's Connect</h2>
+    <p class="section-sub contact-sub">Open to PM roles at Indian startups and global fintech companies, advisory conversations, and product collaborations.</p>
+    <div class="contact-grid">
+      <a href="mailto:akhileshchauhan000.ac@gmail.com" class="contact-card">
+        <div class="icon-box">&#9993;</div>
+        <div class="contact-info">
+          <strong>Email</strong>
+          <span>akhileshchauhan000.ac@gmail.com</span>
+        </div>
+      </a>
+      <a href="https://github.com/akhiii07" target="_blank" rel="noopener" class="contact-card">
+        <div class="icon-box">&#9000;</div>
+        <div class="contact-info">
+          <strong>GitHub</strong>
+          <span>github.com/akhiii07</span>
+        </div>
+      </a>
+      <a href="tel:+918689854792" class="contact-card">
+        <div class="icon-box">&#128241;</div>
+        <div class="contact-info">
+          <strong>India</strong>
+          <span>+91 8689854792</span>
+        </div>
+      </a>
+      <a href="tel:+817027973032" class="contact-card">
+        <div class="icon-box">&#128222;</div>
+        <div class="contact-info">
+          <strong>Japan</strong>
+          <span>+81 7027973032</span>
+        </div>
+      </a>
+    </div>
+    <div class="section-cta">
+      <a href="mailto:akhileshchauhan000.ac@gmail.com" class="btn-brutal btn-primary">SEND A MESSAGE &#x2192;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#home" class="nav-logo footer-logo">AC</a>
+    <p>Akhilesh Chauhan &middot; Product &amp; Program Manager &middot; Based in Japan</p>
+    <p class="footer-copy">Built with HTML, CSS &amp; JS &middot; Deployed via GitHub Pages &middot; 2026</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
