@@ -817,28 +817,28 @@ a { color: inherit; text-decoration: none; }
 /* ===== SWIPE DECK ===== */
 .library-section { overflow: hidden; }
 
-/* Wrapper: deck on the left, buttons stacked on the right */
+/* Wrapper: deck on top, buttons below */
 .swipe-deck-wrapper {
-  display: flex; flex-direction: row;
-  align-items: center; justify-content: center;
-  gap: 28px; padding: 20px 0 52px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 28px;
+  padding: 20px 0 52px;
 }
 
-/* Deck: portrait card with rotated stack behind */
+/* Deck: wide landscape card */
 .swipe-deck {
   position: relative;
-  width: min(38vw, 400px);
-  height: 520px;
+  width: min(70vw, 700px);
+  height: 420px;
   flex-shrink: 0;
 }
 
-/* ── Card: portrait, text on top / image on bottom ── */
+/* Desktop card: image LEFT (full height), text RIGHT */
 .swipe-card {
   position: absolute; inset: 0;
   border: var(--border); border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: row;
   background: var(--white);
   cursor: grab;
   user-select: none; touch-action: none;
@@ -847,20 +847,9 @@ a { color: inherit; text-decoration: none; }
 }
 .swipe-card:active { cursor: grabbing; }
 
-/* Text content — top 40% */
-.swipe-card-body {
-  flex: 0 0 40%; padding: 18px 20px;
-  display: flex; flex-direction: column; gap: 8px;
-  border-bottom: var(--border);
-  order: 1;
-}
-.swipe-card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.swipe-card-body h3 { font-size: 15px; font-weight: 800; line-height: 1.3; }
-.swipe-card-body p  { font-size: 11px; color: var(--muted); line-height: 1.55; flex: 1; overflow: hidden; }
-
-/* Preview image — bottom 60%, perfectly fills its area */
+/* Image panel — left 50%, fills full height */
 .swipe-card-img {
-  flex: 1; order: 2;
+  flex: 0 0 50%;
   position: relative; overflow: hidden;
 }
 .swipe-card-img img {
@@ -884,9 +873,20 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.25;
 }
 
-/* Directional drag hints */
+/* Text content — right side */
+.swipe-card-body {
+  flex: 1; padding: 24px 22px;
+  display: flex; flex-direction: column; gap: 10px;
+  border-left: var(--border);
+  overflow: hidden;
+}
+.swipe-card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.swipe-card-body h3 { font-size: 17px; font-weight: 800; line-height: 1.3; }
+.swipe-card-body p  { font-size: 12px; color: var(--muted); line-height: 1.6; flex: 1; overflow: hidden; }
+
+/* Drag hints */
 .swipe-hint-left, .swipe-hint-right {
-  position: absolute; top: 42%;
+  position: absolute; top: 50%;
   padding: 8px 14px; font-size: 11px; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.06em;
   border: 3px solid; border-radius: 6px;
@@ -904,7 +904,7 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(-50%) rotate(10deg);
 }
 
-/* ── Tinder-style rotated stack behind ── */
+/* Tinder-style rotated stack behind */
 .swipe-card.depth-1 {
   transform: rotate(4deg) translate(14px, -12px);
   z-index: 9 !important; transition: transform 0.35s ease;
@@ -917,14 +917,14 @@ a { color: inherit; text-decoration: none; }
   opacity: 0; pointer-events: none; z-index: 1 !important;
 }
 
-/* ── Buttons: vertical stack to the right of the deck ── */
+/* Controls: horizontal row below deck */
 .swipe-controls {
-  display: flex; flex-direction: column;
-  align-items: stretch; gap: 14px; flex-shrink: 0;
+  display: flex; flex-direction: row;
+  align-items: center; gap: 24px;
 }
 .swipe-action-btn {
-  border: var(--border); padding: 14px 22px;
-  font-size: 12px; font-weight: 700; font-family: inherit;
+  border: var(--border); padding: 14px 28px;
+  font-size: 13px; font-weight: 700; font-family: inherit;
   text-transform: uppercase; letter-spacing: 0.06em;
   cursor: pointer; box-shadow: var(--shadow);
   transition: all 0.1s ease; border-radius: 0; white-space: nowrap;
@@ -935,24 +935,30 @@ a { color: inherit; text-decoration: none; }
 .swipe-btn-next { background: var(--blue); color: var(--brown); }
 .swipe-counter {
   font-size: 13px; font-weight: 700; color: var(--muted);
-  letter-spacing: 0.06em; text-align: center; padding: 2px 0;
+  letter-spacing: 0.06em; text-align: center;
 }
 .swipe-done-msg {
   display: flex; flex-direction: column; align-items: center; gap: 16px;
   padding: 60px 40px; border: var(--border); border-radius: var(--radius);
   background: var(--white); box-shadow: var(--shadow-lg);
-  text-align: center; width: min(38vw, 400px);
+  text-align: center; width: min(70vw, 700px);
 }
 .swipe-done-msg h3 { font-size: 20px; font-weight: 800; }
 .swipe-done-msg p   { font-size: 14px; color: var(--muted); }
 
-/* ── Mobile: same row layout, narrower card ── */
+/* Mobile: portrait — image TOP, text BOTTOM, buttons below */
 @media (max-width: 520px) {
-  .swipe-deck-wrapper { gap: 14px; padding: 16px 0 40px; }
+  .swipe-deck-wrapper { gap: 20px; padding: 16px 0 40px; }
   .swipe-deck { width: 70vw; height: 460px; }
+  .swipe-card { flex-direction: column; }
+  .swipe-card-img { flex: 0 0 55%; position: relative; }
+  .swipe-card-body { flex: 1; border-left: none; border-top: var(--border); padding: 14px 16px; }
+  .swipe-card-body h3 { font-size: 14px; }
+  .swipe-card-body p  { font-size: 11px; }
   .swipe-card.depth-1 { transform: rotate(3deg) translate(10px, -8px); }
   .swipe-card.depth-2 { transform: rotate(-2.5deg) translate(-8px, 4px); }
-  .swipe-action-btn { font-size: 10px; padding: 11px 14px; }
+  .swipe-controls { gap: 14px; }
+  .swipe-action-btn { font-size: 11px; padding: 11px 18px; }
   .swipe-done-msg { width: 70vw; }
 }
 
