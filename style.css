@@ -815,43 +815,53 @@ a { color: inherit; text-decoration: none; }
 .lib-btn { font-size: 10px !important; padding: 8px 14px !important; }
 
 /* ===== SWIPE DECK ===== */
-.library-section { overflow: hidden; } /* clip peeking cards at section edge */
+.library-section { overflow: hidden; }
 
+/* Wrapper: deck on the left, buttons stacked on the right */
 .swipe-deck-wrapper {
-  display: flex; flex-direction: column; align-items: center; gap: 32px;
-  padding: 16px 0 48px;
-  overflow: hidden; /* belt-and-suspenders clip */
+  display: flex; flex-direction: row;
+  align-items: center; justify-content: center;
+  gap: 28px; padding: 20px 0 52px;
 }
-/* Deck: rectangular, wide enough to show peek cards beside it */
+
+/* Deck: portrait card with rotated stack behind */
 .swipe-deck {
   position: relative;
-  width: min(72vw, 700px);
-  height: 400px;
-  margin: 0 auto;
-  overflow: visible; /* let depth-1/2 peek out to the right */
+  width: min(38vw, 400px);
+  height: 520px;
+  flex-shrink: 0;
 }
 
-/* ── Card base (desktop: landscape row) ───────────────────────── */
+/* ── Card: portrait, text on top / image on bottom ── */
 .swipe-card {
   position: absolute; inset: 0;
   border: var(--border); border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
-  display: flex; flex-direction: row; /* image left, content right */
+  display: flex; flex-direction: column;
   background: var(--white);
   cursor: grab;
-  user-select: none;
-  touch-action: none;
+  user-select: none; touch-action: none;
   will-change: transform;
   transition: transform 0.2s ease;
 }
 .swipe-card:active { cursor: grabbing; }
 
-/* Image panel — left 55%, full card height */
+/* Text content — top 40% */
+.swipe-card-body {
+  flex: 0 0 40%; padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 8px;
+  border-bottom: var(--border);
+  order: 1;
+}
+.swipe-card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.swipe-card-body h3 { font-size: 15px; font-weight: 800; line-height: 1.3; }
+.swipe-card-body p  { font-size: 11px; color: var(--muted); line-height: 1.55; flex: 1; overflow: hidden; }
+
+/* Preview image — bottom 60%, perfectly fills its area */
 .swipe-card-img {
-  flex: 0 0 55%;
+  flex: 1; order: 2;
   position: relative; overflow: hidden;
-  height: 100%;
 }
 .swipe-card-img img {
   position: absolute; inset: 0;
@@ -874,20 +884,9 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.25;
 }
 
-/* Content panel — right side */
-.swipe-card-body {
-  flex: 1; padding: 20px 22px;
-  display: flex; flex-direction: column; gap: 10px;
-  border-left: var(--border);
-  overflow: hidden;
-}
-.swipe-card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.swipe-card-body h3 { font-size: 16px; font-weight: 800; line-height: 1.3; }
-.swipe-card-body p { font-size: 12px; color: var(--muted); line-height: 1.6; flex: 1; }
-
-/* Directional hint badges */
+/* Directional drag hints */
 .swipe-hint-left, .swipe-hint-right {
-  position: absolute; top: 50%;
+  position: absolute; top: 42%;
   padding: 8px 14px; font-size: 11px; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.06em;
   border: 3px solid; border-radius: 6px;
@@ -895,43 +894,40 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 0.1s; z-index: 20;
 }
 .swipe-hint-left {
-  left: 16px; color: #c0392b; border-color: #c0392b;
+  left: 14px; color: #c0392b; border-color: #c0392b;
   background: rgba(255,255,255,0.92);
   transform: translateY(-50%) rotate(-10deg);
 }
 .swipe-hint-right {
-  right: 16px; color: #27ae60; border-color: #27ae60;
+  right: 14px; color: #27ae60; border-color: #27ae60;
   background: rgba(255,255,255,0.92);
   transform: translateY(-50%) rotate(10deg);
 }
 
-/* ── Depth / peek positioning ─────────────────────────────────── */
-/* depth-1: next card peeks from the right */
+/* ── Tinder-style rotated stack behind ── */
 .swipe-card.depth-1 {
-  transform: translateX(91%) translateY(6px) scale(0.97);
-  z-index: 9 !important;
-  transition: transform 0.35s ease;
+  transform: rotate(4deg) translate(14px, -12px);
+  z-index: 9 !important; transition: transform 0.35s ease;
 }
-/* depth-2: one more behind, barely peeking */
 .swipe-card.depth-2 {
-  transform: translateX(calc(91% + 18px)) translateY(12px) scale(0.94);
-  z-index: 8 !important;
-  transition: transform 0.35s ease;
+  transform: rotate(-3deg) translate(-12px, 6px);
+  z-index: 8 !important; transition: transform 0.35s ease;
 }
 .swipe-card.depth-hidden {
   opacity: 0; pointer-events: none; z-index: 1 !important;
 }
 
-/* ── Controls ─────────────────────────────────────────────────── */
+/* ── Buttons: vertical stack to the right of the deck ── */
 .swipe-controls {
-  display: flex; align-items: center; gap: 24px;
+  display: flex; flex-direction: column;
+  align-items: stretch; gap: 14px; flex-shrink: 0;
 }
 .swipe-action-btn {
-  border: var(--border); padding: 12px 28px;
-  font-size: 13px; font-weight: 700; font-family: inherit;
+  border: var(--border); padding: 14px 22px;
+  font-size: 12px; font-weight: 700; font-family: inherit;
   text-transform: uppercase; letter-spacing: 0.06em;
   cursor: pointer; box-shadow: var(--shadow);
-  transition: all 0.1s ease; border-radius: 0;
+  transition: all 0.1s ease; border-radius: 0; white-space: nowrap;
 }
 .swipe-action-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
 .swipe-action-btn:active { transform: translate(2px,2px); box-shadow: none; }
@@ -939,28 +935,25 @@ a { color: inherit; text-decoration: none; }
 .swipe-btn-next { background: var(--blue); color: var(--brown); }
 .swipe-counter {
   font-size: 13px; font-weight: 700; color: var(--muted);
-  letter-spacing: 0.06em; min-width: 48px; text-align: center;
+  letter-spacing: 0.06em; text-align: center; padding: 2px 0;
 }
 .swipe-done-msg {
   display: flex; flex-direction: column; align-items: center; gap: 16px;
   padding: 60px 40px; border: var(--border); border-radius: var(--radius);
   background: var(--white); box-shadow: var(--shadow-lg);
-  text-align: center; width: min(72vw, 700px);
+  text-align: center; width: min(38vw, 400px);
 }
 .swipe-done-msg h3 { font-size: 20px; font-weight: 800; }
-.swipe-done-msg p { font-size: 14px; color: var(--muted); }
+.swipe-done-msg p   { font-size: 14px; color: var(--muted); }
 
-/* ── Mobile: portrait card, narrower peek ─────────────────────── */
+/* ── Mobile: same row layout, narrower card ── */
 @media (max-width: 520px) {
-  .swipe-deck { width: 78vw; height: 460px; }
-  .swipe-card { flex-direction: column; }
-  .swipe-card-img { flex: 0 0 54%; height: auto; }
-  .swipe-card-img img { position: static; width: 100%; height: 100%; }
-  .swipe-card-body { border-left: none; border-top: var(--border); }
-  .swipe-card.depth-1 { transform: translateX(88%) translateY(6px) scale(0.96); }
-  .swipe-card.depth-2 { transform: translateX(calc(88% + 14px)) translateY(12px) scale(0.92); }
-  .swipe-done-msg { width: 78vw; }
-  .swipe-action-btn { font-size: 11px; padding: 10px 16px; }
+  .swipe-deck-wrapper { gap: 14px; padding: 16px 0 40px; }
+  .swipe-deck { width: 70vw; height: 460px; }
+  .swipe-card.depth-1 { transform: rotate(3deg) translate(10px, -8px); }
+  .swipe-card.depth-2 { transform: rotate(-2.5deg) translate(-8px, 4px); }
+  .swipe-action-btn { font-size: 10px; padding: 11px 14px; }
+  .swipe-done-msg { width: 70vw; }
 }
 
 /* ===== SKILLS SECTION ===== */
